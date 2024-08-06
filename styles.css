@@ -1,0 +1,324 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: linear-gradient(to right, rgb(129, 146, 255), rgb(81, 104, 255));
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+/* !!!
+header formatting
+!!! */
+
+
+header {
+    background-image: url("https://todaysveterinarynurse.com/wp-content/uploads/sites/3/2018/01/TVP-2018-01_Nutrition-Notes_header.jpg");
+    background-size: cover; 
+    height: 250px;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header img {
+    background: transparent;
+}
+
+header nav {
+    background: transparent;
+    flex: 1;
+    justify-content: space-around; 
+    align-items: center;
+}
+
+header nav a {
+    background: transparent;
+    text-decoration: none;
+    color: rgb(77, 77, 77);
+    padding: 20px;
+    font-size: 27px;
+    font-weight: bold;
+    margin: 105px;
+    font: verdana, serif;
+    transition: all .25s;
+    text-shadow: 1px 1px black;
+} 
+header nav a:hover {
+    transition: all .25s;
+    color: rgb(255, 255, 0);
+}
+
+
+/* !!!
+main formatting
+!!! */
+
+
+
+#side-by-side {
+ display: flex;
+}
+
+
+h1 {
+    font: verdana, serif;
+    font-size: 50px;
+    text-shadow: 2px 2px black;
+    color: rgb(77, 77, 77);
+    padding: 0px 0px 15px 0px;
+}
+
+ #form-section {
+ text-align: center;
+ flex: 50%;
+}
+
+#map {
+    flex: 50%;
+}
+
+
+/* !!!
+form formatting
+!!! */
+
+
+form {
+ 
+ width:100%;
+ 
+}
+
+
+#inside {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+textarea {
+    resize: none;
+
+}
+
+
+#outside {
+    display: flex;
+    flex-direction: column;
+}
+
+#row-1, #row-2 {
+    flex: 1;
+}
+
+#column-1, #column-2 {
+    flex: 1;
+}
+
+input {
+    font-family: inherit;
+    font-size: 115%;
+    border-radius: 25px;
+    text-align: center;
+    width: 250px;
+    height: 50px;
+    background-color: rgb(77, 77, 77);
+    color: white;
+    padding: 10px;
+    margin: 5px 0px;
+    border: 1px white solid;
+  }
+
+  ::placeholder {
+    color: white;
+  }
+
+  textarea {
+  font-family: inherit;
+  font-size: 115%;
+  border-radius: 25px;
+  text-align: center;
+  width: 50%;
+  height: 100px;
+  background-color: rgb(77, 77, 77);
+  color: white;
+  padding: 20px;
+  margin: 5px 0px;
+  border: 1px white solid;
+  }
+  
+#submit {
+    border-radius: 50%;
+    width: 50px;
+    margin: 10px;
+    transition: .5s;
+}
+
+#submit:hover {
+    cursor: pointer;
+    transition: .5s;
+    background-color: white;;
+    color: black;
+}
+
+.label {
+    font-weight: bold;
+    padding: 10px;
+}
+
+
+
+ /* !!!
+ footer formatting
+ !!! */
+
+
+footer {
+    height: 153px;
+    background-color: rgb(0, 8, 121);
+    display: flex;
+    padding: 0px 250px;
+}
+
+#footer-logo {
+    align-content: center;
+    flex: 1;
+}
+
+#footer-links {
+ align-content: center;
+ text-align: center;
+ flex: 1;
+}
+
+footer ul {
+    list-style-type: none;
+}
+
+footer ul li {
+    padding: 5px;
+    
+}
+footer ul li a {
+    text-decoration: none;
+    color: white;
+    transition:.1s;
+}
+
+footer ul li a:hover {
+    transition: .1s;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#footer-contacts {
+    align-content: center;
+    justify-content: flex-end;
+    margin-left: auto;
+    text-align: center;
+    flex: 1;
+}
+
+#footer-copyright {
+    color: white;
+    font-size: 12px;
+    padding-top: 23px;
+}
+
+@media screen and (max-width: 1068px) {
+    footer {
+        padding: 15px 0px;
+    }
+
+    footer img {
+    width: 99%;
+    height: auto;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    header nav a {
+        margin: 0px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #side-by-side {
+        flex-wrap: wrap;
+    }
+    #map {
+       height: 589px;
+       width: auto;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #map {
+        height: 450px;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    header img {
+        height: 23%;    
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 595px) {
+    input {
+        width: 200px;
+        height:auto;
+    }
+}
+
+/*
+popup formatting
+*/
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0, 0, 0, 0.1);
+    color: rgb(77, 77, 77);
+  }
+  .popup-content {
+    background-color: #fefefe;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 300px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-family: inherit;
+    text-shadow: .7px .7px rgb(154, 154, 154);
+  }
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    transition: .25s;
+  }
+  .close:hover,
+  .close:focus {
+    transition: .25s;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }

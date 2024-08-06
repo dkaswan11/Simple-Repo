@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Patient Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+       <img src="https://www.infectionrx.com/wp-content/uploads/2019/06/Retina-Logo.png">
+       
+     <nav>
+      <a href="#home"> Home</a>
+      <a href="#about"> About</a>
+      <a href="#form"> Form</a>
+      <a href="#contact"> Contact Us</a>
+     </nav>
+    </header>
+    
+    <main> 
+
+     <section id="side-by-side">
+
+
+      <div id="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3586.999651779943!2d-80.15099322366616!3d25.968051777222787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9ac612f3c4ff5%3A0x3831063c86e364fc!2sEdelstein%20%26%20Bustamante%20Pa%3A%20Bustamante%20Carlos%20I%20MD!5e0!3m2!1sen!2sus!4v1722351742386!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+       </div>
+
+      <div id="form-section"> 
+       <h1> New Patient Sign Up</h1>
+        <form id="form">
+          <div id="outside">
+        <div id="row-1">
+          <div id="inside">
+          <div id="column-1">
+            <label for="last-name" class="label">Last Name</label> <br>
+          <input name="last-name" id="last-name" required><br>
+            <label for="phone-number" class="label">Phone Number</label><br>
+          <input type="tel" name="phone-number" id="phone-number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="000-000-0000" oninvalid="this.setCustomValidity('Please enter valid phone number formatting')" required><br>
+            <label for="date-birth" class="label">Date of Birth</label><br>
+          <input type="date" name="date-birth" id="date-birth" max="2010-12-31" oninvalid="this.setCustomValidity('You must be older than 13 for this service')" required><br>
+            <label for="referring-physician" class="label">Referring Physician</label><br>
+          <input name="referring-physician" id="referring-physician">
+          </div>
+
+          <div id="column-2">
+            <label for="first-name" class="label">First Name</label><br>
+          <input name="first-name" id="first-name" required><br>
+            <label for="email-address" class="label">Email Address</label><br>
+          <input type="email" name="email-address" id="email-address" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" oninvalid="this.setCustomValidity('Please enter valid email address')" required><br>
+            <label for="insurance-company" class="label">Insurance Company</label><br>
+          <input name="insurance-company" id="insurance-company" required><br>
+            <label for="referring-physician-contact-number" class="label">Referring Physician Number</label><br>
+          <input type="tel" name="referring-physician-contact-number" id="referring-physician-contact-number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="000-000-0000" oninvalid="this.setCustomValidity('Please enter valid phone number formatting')" required>
+          </div>
+         </div>
+          </div>
+          
+          <div id="row-2">
+            <label for="reason-for-visit" class="label">Reason for Visit</label><br>
+          <textarea name="reason-for-visit" id="reason-for-visit" rows="10" cols="60" required></textarea>
+          </div> 
+          <div id="row-3">
+            <input type="submit" value="&#10159;" id="submit" name="submit">
+          </div>
+           </div> 
+        </form>
+       </div>
+      </section>
+
+
+      <div id="popup" class="popup">
+        <div class="popup-content">
+          <span class="close">&times;</span>
+          <p id="popup-text">Form submitted successfully!</p>
+        </div>
+      </div>
+
+
+    </main>
+    <footer>
+      <div id="footer-links">
+        <ul>
+          <li><a href="#home"> Home </a></li>
+          <li><a href="#about"> About </a></li>
+          <li><a href="#private-policy"> Private Policy </a></li>
+        </ul>
+      </div>
+
+      <div id="footer-logo">
+      <img src="https://www.infectionrx.com/wp-content/uploads/2019/06/Retina-Logo.png">
+      </div>
+
+    <div id="footer-contacts">
+      <ul>
+        <li><a href="#email"> InfectionRx@gmail.com </a></li>
+        <li><a href="#phone-number"> 111-111-1111 </a></li>
+        <li id="footer-copyright"> © 2024 InfectionRX. All Rights Reserved.</li>
+      </ul>
+    </div>
+    </footer>
+    <script src="myscripts.js"></script>
+</body>
+</html>
